@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For You ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+.card {
+  background: white;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  animation: fadeIn 1.5s ease;
+}
+
+h1 {
+  color: #ff4d6d;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  background: #ff4d6d;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #e63950;
+  transform: scale(1.05);
+}
+
+.hidden {
+  display: none;
+  margin-top: 20px;
+  font-size: 15px;
+  color: #555;
+}
+
+.heart {
+  font-size: 30px;
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <div class="heart">❤️</div>
+  <h1>Hey Love</h1>
+  <p>
+    I know today feels heavy.  
+    I just want you to remember —  
+    you are **deeply loved**, **never alone**,  
+    and you matter more than you think.
+  </p>
+
+  <button onclick="showMessage()">Click this 💖</button>
+
+  <div id="surprise" class="hidden">
+    <p>
+      No matter how low you feel,  
+      I’m always on your side.  
+      Bad days pass.  
+      **You don’t.**
+    </p>
+    <p>— Yours 🫶</p>
+  </div>
+</div>
+
+<script>
+function showMessage() {
+  document.getElementById("surprise").style.display = "block";
+}
+</script>
+
+</body>
+</html>
